@@ -96,10 +96,10 @@ def project(request, post):
 
             score = (design_average + usability_average + content_average)/3
             print(score)
-            rate.design_average = design_average
-            rate.usability_average = usability_average
-            rate.content_average = content_average
-            rate.score = score
+            rate.design_average = round(design_average, 2)
+            rate.usability_average = round(usability_average, 2)
+            rate.content_average = round(content_average, 2)
+            rate.score = round(score, 2)
             rate.save()
     else:
         form = RatingsForm()
