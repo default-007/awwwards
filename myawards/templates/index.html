@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="text-center">Hello</h1>
+{% include 'navbar.html' %}
+<div class="container">
+    <h1 class="text-center">Hello</h1>
+    <a href="{% url 'logout' %}" class="btn btn-sm btn-info">Log Out</a>
+</div>
+
 {% endblock %}
