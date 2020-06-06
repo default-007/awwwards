@@ -33,7 +33,7 @@ class Post(models.Model):
     description = models.CharField(max_length=255)
     technologies = models.CharField(max_length=200)
     photo = ImageField(manual_crop='1280x720')
-    user = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True, related_name="posts")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
