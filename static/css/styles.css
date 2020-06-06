@@ -1,3 +1,21 @@
 .hello {
   color: green;
 }
+#nbar {
+  background-color: #52616b;
+  color: black;
+}
+.login,
+#site {
+  text-decoration: none;
+  color: white;
+}
+
+.login:hover,
+#site:hover {
+  text-decoration: none;
+  color: white;
+}
+.brand {
+  font-weight: bolder;
+}
