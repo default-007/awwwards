@@ -23,9 +23,10 @@
                         aria-haspopup="true" aria-expanded="false">{{ user.username|title }}
                     </a>
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item text-center" href="#">Profile</a>
+                        <a class="dropdown-item text-center" href="{% url 'profile' user.username %}">Profile</a>
                         <hr>
                         <a href="{% url 'logout' %}" class="text-secondary text-center dropdown-item">Log Out</a>
+
 
                     </div>
                 </li>
