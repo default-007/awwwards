@@ -30,3 +30,14 @@ account-img {
 body {
   background-color: #d4d7dd;
 }
+#heart {
+  float: right;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+#heart:hover {
+  color: blue;
+  border: 1px solid blue;
+}
