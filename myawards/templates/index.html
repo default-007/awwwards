@@ -23,7 +23,8 @@
                 </a>
             </div>
             <div class="card-body">
-                <h6 class="card-title">{{post.title|title}}</h6>
+                <h6 class="card-title"><a href="{% url 'project' post.title %}">{{post.title|title}}</a> <a
+                        class="btn btn-sm btn-outline-info" href="{{ post.url }}"> View</a></h6>
                 <hr>
                 <p class="card-text "><img src="{{post.user.profile.profile_picture.url}}" class="nav-img mr-2" alt="">
                     By {{post.user.username|title}} <span style="float:right">{{post.date|date}}</span>
