@@ -5,7 +5,6 @@ from django.dispatch import receiver
 
 
 # Create your models here.
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     profile_picture = models.ImageField(upload_to='images/', default='default.png')
@@ -20,7 +19,7 @@ class Profile(models.Model):
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
-            Profile.objects.create(user=instance)
+            Profile.objects.create(user=instance
 
     @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
