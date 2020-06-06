@@ -58,7 +58,7 @@ class Rating(models.Model):
     content = models.IntegerField(choices=rating, blank=True)
     score = models.IntegerField(default=0, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='rater')
-    post_rated = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='ratings', null=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='ratings', null=True)
 
     def save_comment(self):
         self.save()

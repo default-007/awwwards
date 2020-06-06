@@ -22,6 +22,13 @@
             <p class="card-text "><img src="{{post.user.profile.profile_picture.url}}" class="nav-img mr-2" alt="">
                 By {{post.user.username|title}} <span style="float:right">{{post.date|date}}</span>
             </p>
+            {% if user.is_authenticated %}
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{rating_form|crispy}}
+                <button class="btn btn-sm btn-info">Rate</button>
+            </form>
+            {% endif %}
         </div>
 
     </div>
