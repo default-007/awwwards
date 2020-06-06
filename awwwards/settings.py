@@ -41,7 +41,13 @@ INSTALLED_APPS = [
     'myawards',
     'crispy_forms',
     'rest_framework',
+    'pyuploadcare.dj',
 ]
+
+UPLOADCARE = {
+    'pub_key': '2b709bca64245dd9e55e',
+    'secret': '0a60851de5f3db2dc728',
+}
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -82,8 +88,10 @@ WSGI_APPLICATION = 'awwwards.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'awwwards',
+        'USER': 'default-007',
+    'PASSWORD':'expandebles7',
     }
 }
 
