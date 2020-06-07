@@ -29,9 +29,13 @@ def index(request):
     try:
         posts = Post.objects.all()
         posts = posts[::-1]
-        a_post = random.randint(0, len(posts)-1)
-        random_post = posts[a_post]
-        print(random_post.photo)
+        a_post = random.randint(0, abs(len(posts)-1))
+        try:
+            random_post = posts[a_post]
+            print(random_post.photo)
+        except IndexError:
+            random_post = 'null'
+        
     except Post.DoesNotExist:
         posts = None
     return render(request, 'index.html', {'posts': posts, 'form': form, 'random_post': random_post})
@@ -60,7 +64,7 @@ def signup(request):
             user.is_active = False
             user.save()
             current_site = get_current_site(request)
-            email_subject = 'Activate your blog account.'
+            mail_subject = 'Activate your blog account.'
             message = render_to_string('acc_active_email.html', {
                 'user': user,
                 'domain': current_site.domain,
@@ -89,6 +93,7 @@ def activate(request, uidb64, token):
         login(request, user)
         # return redirect('home')
         return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+        return redirect('index')
     else:
         return HttpResponse('Activation link is invalid!')
 

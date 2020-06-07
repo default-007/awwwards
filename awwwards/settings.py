@@ -153,10 +153,11 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning'
 }
+
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'example@gmail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_USER = 'brianokola@gmail.com'
+EMAIL_HOST_PASSWORD = 'qwerty12345google'
 EMAIL_PORT = 587
 
 django_heroku.settings(locals())
