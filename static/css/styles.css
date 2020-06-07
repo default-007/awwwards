@@ -64,6 +64,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 0px;
+}
+.over {
+  background-color: rgba(0, 0, 0, 0.75);
+}
 #design {
   color: white;
   border: 3px solid orange;
