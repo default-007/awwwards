@@ -9,9 +9,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <form class="form-inline">
+                    <form class="form-inline" method="get" action="{% url 'search' %}">
+                        {% csrf_token %}
                         <div class="md-form my-0">
-                            <input class="form-control mr-sm-2 " type="text" placeholder="Search" aria-label="Search">
+                            <input class="form-control mr-sm-2 " type="text" placeholder="Search" name="title"
+                                aria-label="Search">
                         </div>
                     </form>
                 </li>
@@ -30,6 +32,8 @@
                         <a class="dropdown-item text-center" href="{% url 'edit' user.username  %}"> Edit profile</a>
                         <hr>
                         <a href="{% url 'logout' %}" class="text-secondary text-center dropdown-item">Log Out</a>
+
+
                     </div>
                 </li>
                 {% else %}
@@ -38,28 +42,6 @@
                 <button class="btn btn-info btn-sm" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
                     Submit your site
                 </button>
-                <div class="modal fade bd-example-modal-xl" id="ModalCenter" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="post" enctype="multipart/form-data">
-                                    {% csrf_token %}
-                                    {{ form|crispy }}
-                                    <input type="submit" class="btn btn-sm btn-info" value="Save" />
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </ul>
         </div>
     </div>
