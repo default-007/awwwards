@@ -25,7 +25,7 @@ Click [View Site](https://awwwards-007.herokuapp.com/) to visit the site
 
 ###### Home page
 
-<img src="https://raw.githubusercontent.com/default-007/awwwards/master/static/images/profile.png">
+<img src="https://raw.githubusercontent.com/default-007/awwwards/master/static/images/landing.png">
  
  ###### Rating of a post
 <img src="https://raw.githubusercontent.com/default-007/awwwards/master/static/images/profile.png">
