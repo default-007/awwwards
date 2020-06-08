@@ -1,7 +1,10 @@
-
-#nbar{   
-    background-color:black;
-    color:black;
+h2 {
+  font-family: "Sonsie One", cursive;
+}
+.navbar-brand {
+  font-family: "Sonsie One", cursive;
+  font-weight: bolder;
+  font-size: x-large;
 }
 .login, #site{
     text-decoration: none;
@@ -24,7 +27,7 @@
     width: 30px;
 }
 body{
-    background-color:white;
+    background-color: #182628;
 }
 #heart{
     float:right;
