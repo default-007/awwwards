@@ -15,6 +15,13 @@
         <html class="no-js" lang="en">
 
         <body class="home" data-debug="0">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
 
             <section id="content">
                 <div class="content-view">

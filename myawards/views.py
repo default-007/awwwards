@@ -6,6 +6,7 @@ from .models import Profile, Post, Rating
 from .serializers import ProfileSerializer, UserSerializer, PostSerializer
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
+from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
@@ -76,6 +77,7 @@ def signup(request):
                         mail_subject, message, to=[to_email]
             )
             email.send()
+            messages.success(request, 'Account was created.')
             return HttpResponse('We have sent you an email, please confirm your email address to complete registration')
     else:
         form = SignupForm()
@@ -92,8 +94,9 @@ def activate(request, uidb64, token):
         user.save()
         login(request, user)
         # return redirect('home')
-        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
         return redirect('index')
+        messages.success('Thank you for your email confirmation. Now you can login your account.')
+        
     else:
         return HttpResponse('Activation link is invalid!')
 

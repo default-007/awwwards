@@ -1,7 +1,5 @@
-.hello{
-    color:green;
-}
-#nbar{
+
+#nbar{   
     background-color:black;
     color:black;
 }
@@ -106,7 +104,6 @@ body{
 }
 .site-link{
     padding-top:-20px;!important
-
 }
 .mi{
     background-position:center;
