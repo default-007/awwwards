@@ -2,11 +2,22 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container" style="margin-top:7%">
-    <img class="rounded-circle account-img content-center" src="{{ user_prof.profile.profile_picture.url }}">
-    <p class="text-center">{{user_prof.username}}</p>
-    <p class="text-center"> {{user_prof.email}}</p>
-    <p class="text-center"> {{user_prof.name}}</p>
-    <p class="text-center"> {{user_prof.location}}</p>
+
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 mt-4">
+            <img class="rounded-circle account-img content-center" src="{{ user_prof.profile.profile_picture.url }}">
+            <h3 class="account-heading"><span class="mr-3 text-secondary username">
+                    <strong>{{user_prof.username}}</strong> </span>
+            </h3>
+            <p class="text-left">Email: {{user_prof.email}}</p>
+            <p class="text-left">Name: {{user_prof.name}} </p>
+            <p class="text-left">Location: {{user_prof.location}} </p>
+            <p class="text-center text-secondary">{{ user_prof.bio }}</p>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
 
 </div>
 {% endblock %}
