@@ -51,7 +51,7 @@ https://github.com/default-007/awwwards.git
 ##### Navigate into the folder and install requirements
 
 ```bash
-cd project-awwards pip install -r requirements.txt
+cd awwwards pip install -r requirements.txt
 ```
 
 ##### Install and activate Virtual
@@ -96,9 +96,9 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ### Api Endpoints
 
-- https://chawwards.herokuapp.com/api/users/
-- https://chawwards.herokuapp.com/api/profile/
-- https://chawwards.herokuapp.com/api/posts/
+- https://awwwards-007.herokuapp.com/api/users/
+- https://awwwards-007.herokuapp.com/api/profile/
+- https://awwwards-007.herokuapp.com/api/posts/
 
 ## Technology used
 
